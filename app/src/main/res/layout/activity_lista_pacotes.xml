@@ -3,37 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.activity.listaPacotesActivity">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/banner_inicial"
         android:layout_width="0dp"
         android:layout_height="120dp"
+        android:contentDescription="@string/banner_inicial_dos_pacotes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:color/holo_purple" />
+        app:srcCompat="@color/cor_primaria" />
 
     <TextView
-        android:id="@+id/Especiais"
+        android:id="@+id/especiais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="Especiais"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/banner_inicial"
+        app:layout_constraintEnd_toEndOf="@+id/banner_inicial"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/banner_inicial"
+        app:layout_constraintTop_toTopOf="@+id/banner_inicial"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/Brasil"
+        android:id="@+id/pais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -41,16 +41,18 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/Especiais"
-        app:layout_constraintTop_toBottomOf="@+id/Especiais" />
+        app:layout_constraintStart_toStartOf="@+id/especiais"
+        app:layout_constraintTop_toBottomOf="@+id/especiais" />
 
     <ListView
         android:id="@+id/lista_pacotes_listview"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/banner_inicial"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_pacote_de_viagens"/>
 
