@@ -16,7 +16,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@drawable/sao_paulo_sp" />
+        tools:srcCompat="@drawable/sao_paulo_sp"
+        android:contentDescription="@string/foto_do_local" />
 
 
     <TextView
@@ -42,10 +43,14 @@
 
     <TextView
         android:id="@+id/resumodataDaViagem"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:textSize="14sp"
+        app:chainUseRtl="false"
+        app:layout_constraintEnd_toStartOf="@+id/resumovalorAPagar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/resumonumeroDeDias"
         tools:text="08/12 - 10/12 de 2017" />
@@ -54,25 +59,26 @@
         android:id="@+id/resumopreçoFinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/pre_o_final"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/resumovalorAPagar"
         app:layout_constraintEnd_toEndOf="@+id/resumovalorAPagar"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/resumonomeDoLocal"
-        app:layout_constraintTop_toBottomOf="@id/resumonomeDoLocal"
-        android:text="Preço Final:" />
+        app:layout_constraintHorizontal_bias="1.0" />
 
     <TextView
         android:id="@+id/resumovalorAPagar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="427dp"
+        android:textAlignment="viewEnd"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
+        app:chainUseRtl="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toEndOf="@+id/resumodataDaViagem"
         app:layout_constraintTop_toBottomOf="@+id/resumofotoDoLocal"
         app:layout_constraintVertical_bias="0.13999999"
@@ -84,13 +90,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:background="@drawable/botao_redondo_laranja"
-        android:text="REALIZAR PAGAMENTO"
+        android:text="@string/realizar_pagamento"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextContrastCheck" />
 
 
 </android.support.constraint.ConstraintLayout>

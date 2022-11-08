@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <ImageView
+        android:id="@+id/parabensBannerLaranja"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/conte_do_do_banner_inicial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/quadrado_laranja"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/parabensParabens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Parabéns!"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/parabensCompraRealizada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Compra realizada com sucesso :)"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/parabensParabens"
+        app:layout_constraintStart_toStartOf="@+id/parabensParabens"
+        app:layout_constraintTop_toBottomOf="@+id/parabensParabens"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/parabensConfiraOResumo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Confira o resumo da compra:"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parabensBannerLaranja" />
+
+    <ImageView
+        android:id="@+id/parabensFotoDoLocal"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parabensConfiraOResumo"
+        tools:background="@drawable/sao_paulo_sp" />
+
+    <TextView
+        android:id="@+id/parabensLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parabensFotoDoLocal"
+        tools:text="São Paulo" />
+
+    <TextView
+        android:id="@+id/parabensDatas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/parabensLocal"
+        app:layout_constraintTop_toBottomOf="@id/parabensLocal"
+        tools:text="08/12 - 10/12 de 2017" />
+
+    <TextView
+        android:id="@+id/parabensValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/parabensDatas"
+        app:layout_constraintTop_toTopOf="@+id/parabensDatas"
+        tools:text="R$ 243,99" />
+
+
+</android.support.constraint.ConstraintLayout>

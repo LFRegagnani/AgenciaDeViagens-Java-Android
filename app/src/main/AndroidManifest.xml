@@ -14,10 +14,16 @@
         android:theme="@style/Theme.RegagnaniViagens"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activity.ParabensActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.PagamentoPacoteActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.ResumoPacoteActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.listaPacotesActivity"
+            android:name=".ui.activity.ListaPacotesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
